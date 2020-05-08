@@ -21,7 +21,7 @@ inotifywait_with_debounce() {
         echo "FILE_SAVED at SECONDS: ${SECONDS}"
         if test -n "$DEBOUNCE_PID" && ps -p $DEBOUNCE_PID > /dev/null ; then
             echo "Killing debounce PID: ${DEBOUNCE_PID}"
-            kill -9 $DEBOUNCE_PID
+            kill $DEBOUNCE_PID
         fi
         run_debounce_action &
         DEBOUNCE_PID=$!
