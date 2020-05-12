@@ -31,3 +31,13 @@ Watch my technical journal file and run an action whenever it has been saved but
 ```
 ./debounce.sh ./inotifywait-debounce.sh 10 ./action.sh
 ```
+
+### Tests
+
+Tests are written with [Bash Automated Testing Systems 2018 (bats-core)](https://github.com/bats-core/bats-core).
+
+Run tests in `test/`:
+
+```
+bats test.bats
+```
