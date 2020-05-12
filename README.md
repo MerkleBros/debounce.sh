@@ -1,6 +1,8 @@
 # 🎱 debounce.sh
 ## A generic debounce for Bash.
 
+![gif of script running on command line](debounce.gif)
+
 __Debouncing__ is the process of taking multiple sequential events of the same type and grouping them together as one. By treating a group of events as one event, you can handle them all at once instead of handling each event individually.
 
 Debounce is often used in front-end design for things like autosaving a form that a user is typing in - but only after they have finished typing for some time (all keypress events are grouped together and treated as one).
@@ -27,5 +29,5 @@ Watch standard input and print "Ran action" whenever text has been submitted to 
 Watch my technical journal file and run an action whenever it has been saved but not saved again for 10 seconds
 
 ```
-./debounce.sh ./inotifywait-debounce.sh 5 ./action.sh
+./debounce.sh ./inotifywait-debounce.sh 10 ./action.sh
 ```
