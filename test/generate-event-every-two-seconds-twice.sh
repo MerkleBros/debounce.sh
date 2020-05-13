@@ -1,3 +1,6 @@
+#! /usr/bin/env bash
+set -euo pipefail
+
 COUNTER="$(cat counter.txt)"
 if test "${COUNTER}" -eq "2"; then
     exit 1
